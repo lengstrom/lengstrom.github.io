@@ -50,7 +50,7 @@ body > div {
 }
 
 .img_title {
-	font-size: 16px;
+	font-size: 18px;
 }
 
 .img_title:hover {
@@ -58,7 +58,7 @@ body > div {
 }
 
 .img_date {
-	margin-top:1px;
+	margin-top:3px;
 	color:rgb(100, 100, 100);
 	position:absolute;
 	right:0;
@@ -73,7 +73,7 @@ body > div {
 
 .img_cont > a {
 	text-decoration: none;
-	color:rgb(100, 100, 100);
+	color:rgb(0, 0, 0);
 }
 
 .img_img {
