@@ -50,10 +50,13 @@ body > div {
 }
 
 .img_title {
-	/*float:left;*/
 	font-size: 16px;
-	color:#2980b9;
 }
+
+.img_title:hover {
+	text-decoration: underline ! important;
+}
+
 .img_date {
 	margin-top:1px;
 	color:rgb(100, 100, 100);
@@ -69,11 +72,11 @@ body > div {
 }
 
 .img_cont > a {
-	color:#2980b9;
+	text-decoration: none;
+	color:rgb(100, 100, 100);
 }
 
 .img_img {
-	color:#2980b9;
 	border:1px solid rgb(200, 200, 200);
 	margin-top: 1px;
 }
