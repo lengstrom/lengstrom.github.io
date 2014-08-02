@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<title>Logan Engstrom</title>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+	</head>
+	<body>
+		<div class = 'title header'>Logan Engstrom</div>
+		<div id = 'recent' name = 'recent'>
+			<div class = 'title subHeader firstSubHeader'>
+				<a href = '#recent'>#</a>
+				<b>Recent</b>
+			</div>
+		</div>
+	
+		<div id = 'projects' name = 'projects'>
+			<div class = 'title subHeader'>
+				<a href = '#projects'>#</a>
+				<b>Projects</b>
+			</div>
+		</div>
+
+
+		<div id = 'education' name = 'education'>
+			<div class = 'title subHeader'>
+				<a href = '#education'>#</a>
+				<b>Education</b>
+			</div>
+		</div>
+
+
+		<div id = 'articles' name = 'articles'>
+			<div class = 'title subHeader'>
+				<a href = '#articles'>#</a>
+				<b>Articles</b>
+			</div>
+		</div>
+
+		<div id = 'research' name = 'research'>
+			<div class = 'title subHeader'>
+				<a href = '#research'>#</a>
+				<b>Research</b>
+			</div>
+		</div>
+	
+		<script type="text/javascript" src = '/vendor/jquery.js'></script>
+		<script type="text/javascript" src = '/json/showcase.js'></script>
+		<script type='text/javascript'>
+			showCase.forEach(function(o) {
+				make_img_cont(o.title, o.date, o.src, o.url, o.target);
+			});
+
+			for (var i = 0; i < 3; i++) {
+				if (showCase.length > i) {
+					var o = showCase[i]
+					make_img_cont(o.title, o.date, o.src, o.url, 'recent');
+				} else {
+					break;
+				}
+			}
+
+			function make_img_cont(title, date, src, url, target) {
+				var img_cont = document.createElement('div');
+				var img_date = document.createElement('span');
+				var img_title = document.createElement('span');
+				var img_a = document.createElement('a');
+				var img_img = document.createElement('img');
+				img_cont.className = 'img_cont';
+				img_date.className = 'img_date';
+				img_a.href = url;
+				img_title.innerHTML = title;
+				img_img.src = src;
+				img_img.width = 800;
+				img_img.className = 'img_img';
+				img_date.innerHTML = date;
+				img_a.appendChild(img_title);
+				img_a.appendChild(img_img);
+				img_cont.appendChild(img_date);
+				img_cont.appendChild(img_a);
+				document.getElementById(target).appendChild(img_cont);
+			}
+		</script>
+	</body>
+</html>
