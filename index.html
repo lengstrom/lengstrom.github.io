@@ -6,12 +6,6 @@
 	</head>
 	<body>
 		<div class = 'title header'>Logan Engstrom</div>
-		<div class = 'case' id = 'recent' name = 'recent'>
-			<div class = 'title subHeader firstSubHeader'>
-				<a href = '#recent'>#</a>
-				<b>Recent</b>
-			</div>
-		</div>
 	
 		<div class = 'case' id = 'projects' name = 'projects'>
 			<div class = 'title subHeader'>
@@ -47,15 +41,6 @@
 			showCase.forEach(function(o) {
 				make_img_cont(o.title, o.date, o.src, o.url, o.target);
 			});
-
-			for (var i = 0; i < 3; i++) {
-				if (showCase.length > i) {
-					var o = showCase[i]
-					make_img_cont(o.title, o.date, o.src, o.url, 'recent');
-				} else {
-					break;
-				}
-			}
 
 			function make_img_cont(title, date, src, url, target) {
 				var img_cont = document.createElement('div');
