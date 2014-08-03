@@ -1,13 +1,4 @@
 var showCase = [
-	/* Format
-	{
-		"title": "",
-		"date": "",
-		"src": "",
-		"url": "",
-		"target": ""
-	},
-	*/
 	{
 		"title": "Hextris",
 		"date": "July 28, 2014",

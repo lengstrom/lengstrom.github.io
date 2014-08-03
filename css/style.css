@@ -1,21 +1,56 @@
+@font-face {
+    font-family: 'Meslo';
+    src: url('/fonts/meslolgm-regular-webfont.eot');
+    src: url('/fonts/meslolgm-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/meslolgm-regular-webfont.woff') format('woff'),
+         url('/fonts/meslolgm-regular-webfont.ttf') format('truetype'),
+         url('/fonts/meslolgm-regular-webfont.svg#meslo_lg_mregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+	text-decoration: none;
+	color:#2980b9;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 body {
 	font-family: 'PT Sans', sans-serif;
-	padding-left:4em;
+	padding-left: 4em;
 	margin-left: 200px;
 	margin-right: 200px;
 	margin-top: 50px;
 }
 
+.author_top {
+	position:absolute;
+	top:14px;
+}
+
+.author_bottom {
+	position:relative;
+	margin-top:14px;
+}
+
 .header {
 	font-size: 4em;
 	margin-left: -5px;
+	color:#000;
 }
 
 .subHeader {
-	margin-top: 50px;
-	margin-bottom: 20px;
+	margin-top: 1.5em;
+	margin-bottom: .25em;
 	margin-left: -23px;
 	font-size: 25px;
+}
+
+.case {
+	font-family: 'PT Sans', sans-serif;
 }
 
 .firstSubHeader {
@@ -27,7 +62,9 @@ body {
 }
 
 body > p {
+	margin:0;
 	width:800px;
+	color:rgb(64, 64, 64);
 }
 
 body > div {
@@ -80,4 +117,86 @@ body > div {
 .img_img {
 	border:1px solid rgb(200, 200, 200);
 	margin-top: 1px;
+}
+
+/* Code formatting */
+
+pre, code, textarea {
+  font-family: 	'Meslo', monospace;
+  background-color:rgb(246,246,246) ! important;
+  width:800px;
+}
+
+code {
+  line-height: 1.2em;
+}
+
+textarea {
+  font-size: 100%;
+}
+
+body > pre {
+  border-left: solid 2px #ccc;
+  padding-left: 18px;
+  margin: 1em 0 1em -20px;
+}
+
+.html .value,
+.javascript .string,
+.javascript .regexp {
+  color: #756bb1;
+}
+
+.html .tag,
+.css .tag,
+.javascript .keyword {
+  color: #3182bd;
+}
+
+.comment {
+  color: #636363;
+}
+
+.html .doctype,
+.javascript .number {
+  color: #31a354;
+}
+
+.html .attribute,
+.css .attribute,
+.javascript .class,
+.javascript .special {
+  color: #e6550d;
+}
+
+svg {
+  font: 10px sans-serif;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+sup, sub {
+  line-height: 0;
+}
+
+q:before {
+  content: "“";
+}
+
+q:after {
+  content: "”";
+}
+
+blockquote q {
+  line-height: 1.5em;
+  display: inline;
+}
+
+blockquote q:before,
+blockquote q:after {
+  content: "";
 }
