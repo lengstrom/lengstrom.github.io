@@ -47,7 +47,19 @@ var showCase = [
 		"src": "/img/math_evaluator.gif",
 		"url": "https://sublime.wbond.net/packages/Selection%20Evaluator",
 		"target": "projects"
-	},	
+	},{
+		"title": "Flare: Top 10 @ <a href='2014f.pennapps.com'>PennApps</a> & \"Best iOS App\" (First place) @ PennApps!",
+		"date": "September 15, 2014",
+		"src": "/img/flare.png",
+		"url": "http://challengepost.com/software/flare-tm5n9",
+		"target": "projects"
+	},{
+		"title": "Radial",
+		"date": "September 13, 2014",
+		"src": "/img/radial.png",
+		"url": "https://github.com/meadowstream/Radial",
+		"target": "projects"
+	},
 ]
 
 showCase = showCase.sort(function(a,b) {

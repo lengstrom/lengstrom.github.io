@@ -18,42 +18,79 @@
 			path {
 				fill-rule: evenodd;
 				stroke: #333;
-				stroke-width: 2px;
+				stroke-width: 3px;
 			}
 
 			.central_gear path {
 				fill: #ecf0f1;
 			}
+
+			.tooth {
+				stroke: #e74c3c ! important;
+				stroke-width: 5px ! important;
+			}
+
+			svg {
+				border:1px solid rgb(200, 200, 200);
+			}
 		</style>
 	</head>
 	<body>
-		<script type="text/javascript" src='/vendor/d3.v3.min.js'></script>
+		<script type="text/javascript" src='../vendor/d3.v3.min.js'></script>
 		<script type="text/javascript">
 			var width = 960,
 				height = 500,
 				radius = 80,
+				angle = 0,
+				num_teeth = 12,
 				x = Math.sin(2 * Math.PI / 3),
-				y = Math.cos(2 * Math.PI / 3);
+				y = Math.cos(2 * Math.PI / 3),
+				keys = [];
 
 			var offset = 0,
 				speed = 4,
+				last = false;
 				start = Date.now();
+
+			var physicsSystem = new GearPhysics();
+			var PID = new PID_Control();
 
 			var svg = d3.select("body").append("svg")
 				.attr("width", width)
 				.attr("height", height)
 				.append("g")
-				.attr("transform", "translate(50, 50)scale(.55)")
+				.attr("transform", "translate(" + (width/4) + ", " + (height/2) + ")scale(.55)")
 				.append("g");
 
-			var frame = svg.append("g")
-				.datum({radius: Infinity});
+			var frame = svg.append("g");
 
-			frame.append("g")
-				.attr("class", "central_gear")
-				.datum({teeth: 16, radius: radius})
-				.append("path")
+			var real_graph_frame = svg.append("g");
+
+			var g1 = frame.append("g")
+				.attr("class", "central_gear gear")
+				.datum({teeth: num_teeth, radius: radius})
+				.attr("transform","translate(" + (2 * radius) + " ,0)");
+
+			g1.append("path")
 				.attr("d", gear);
+
+			g1.append("path")
+				.attr("class", 'tooth')
+				.attr("d", tooth);
+
+			var setpoint_graph = real_graph_frame.append('polyline')
+				.attr('stroke-width',3)
+				.attr('fill', 'none')
+				.attr('stroke','#7f8c8d')
+				.attr('transform',"translate(200, 0)")
+				.attr('d', 'M0,0');
+
+			var process_graph = real_graph_frame.append('polyline')
+				.attr('stroke-width',3)
+				.attr('fill', 'none')
+				.attr('stroke','#7f8c8d')
+				.attr('transform',"translate(200, 0)")
+				.attr('d', 'M0,0');
 
 			function gear(d) {
 				var n = d.teeth,
@@ -76,14 +113,147 @@
 				return path.join("");
 			}
 
+			function tooth(d) {
+				var n = d.teeth,
+				r2 = Math.abs(d.radius),
+					r0 = r2 - 8,
+					r1 = r2 + 8,
+					r3 = d.annulus ? (r3 = r0, r0 = r1, r1 = r3, r2 + 20) : 20,
+					da = Math.PI / n,
+					a0 = -Math.PI / 2 + (d.annulus ? Math.PI / n : 0),
+					i = -1,
+					path = ["M", r0 * Math.cos(a0 + da), ",", r0 * Math.sin(a0 + da)];
+					// path = ["M", "0,0"];
+				while (++i < 1) {
+					path.push(
+						"A", r0, ",", r0, " 0 0,1 ", (r0 - 1) * Math.cos(a0 += da), ",", (r0-1) * Math.sin(a0),
+						"L", r2 * Math.cos(a0), ",", r2 * Math.sin(a0),
+						"L", r1 * Math.cos(a0 += da / 3), ",", r1 * Math.sin(a0),
+						"A", r1, ",", r1, " 0 0,1 ", r1 * Math.cos(a0 += da / 3), ",", r1 * Math.sin(a0),
+						"L", r2 * Math.cos(a0 += da / 3), ",", r2 * Math.sin(a0),
+						"L", (r0-1) * Math.cos(a0), ",", (r0-1) * Math.sin(a0));
+					}
+				return path.join("");
+			}
+
 			d3.timer(function() {
-				var angle = (Date.now() - start) * speed,
-				transform = function(d) { return "rotate(" + angle / d.radius + ")"; };
-				frame.selectAll("path").attr("transform", transform);
-				frame.attr("transform", transform); // frame of reference
+				var now = Date.now();
+				if (last == false) {
+					last = now;
+				} else {
+					var dt = now - last;
+					dt /= 1000;
+					setLines(now - start);
+					physicsSystem.update(dt);
+					transform = function(d) { return "rotate(" + (angle + 360 * (1/(4 * num_teeth) - 1/(num_teeth))) + ")"; };
+					frame.selectAll("path").attr("transform", transform);
+					last = now;
+				}
 			});
 
+			function setLines(t_dx) {
+				var x_v = t_dx/16.66666; // convert to ms
+				var const_str = "L" + x_v + ",";
+				setpoint_graph
+					.attr('d',setpoint_graph.attr('d') + const_str + physicsSystem.targetAngle/10);
 
+				process_graph
+					.attr('d',process_graph.attr('d') + const_str + angle/10);
+			}
+
+			function set_angle(new_angle) {
+				angle = new_angle;
+			}
+
+			function GearPhysics() {
+				this.radius = 1;
+				this.friction = 500;
+				this.externalTorque = 0;
+				this.frictionTorque = this.radius * this.friction;
+				this.angularVelocity = 0;
+				this.mass = 1;
+				this.kineticFriction = this.friction * this.radius;
+				this.inertialMoment = this.mass * this.radius * this.radius;
+				// this.targetTimeStep = 1/60;
+				this.angularVelocity = 0;
+				this.targetAngle = 180;
+				this.angularAccleration = 0;
+				this.targetAngularVelocity = 0;
+				this.staticFrictionThreshold = this.frictionTorque;
+				this.torque = 0;
+				this.torqueBound = 10000;
+				var t= this;
+				// setTimeout(function(){
+				// 	t.externalTorque = 5000000;
+				// }, 1000)
+				this.update = function(dt) {
+					debugger;
+					this.externalTorque += PID.getUpdate(this.targetAngle - angle, dt);
+					if (Math.abs(this.externalTorque) > this.torqueBound) {
+						this.externalTorque = sgn(this.externalTorque) * this.torqueBound;
+					}
+
+					this.torque = 0;
+					var totalExternalTorque = this.externalTorque * this.radius;
+
+					var exactedFrictionTorque;
+					if (totalExternalTorque - this.frictionTorque < 0 && Math.abs(this.angularVelocity) < .0000001) { // account for floating point error and negligible angular velocity
+						exactedFrictionTorque = totalExternalTorque;
+					} else {
+						exactedFrictionTorque = this.frictionTorque;
+					}
+					exactedFrictionTorque = -sgn(this.angularVelocity) * Math.abs(exactedFrictionTorque);
+					this.torque += exactedFrictionTorque;
+					this.torque += totalExternalTorque;
+					this.angularAccleration = (1/this.inertialMoment) * this.torque;
+					this.angularVelocity += this.angularAccleration * dt;
+					this.angularVelocity /= 1.2;
+					if (sgn(exactedFrictionTorque) == sgn(this.angularVelocity) && sgn(totalExternalTorque) != sgn(totalExternalTorque)) {
+						this.angularVelocity = 0;
+					}
+
+					set_angle(angle + dt * this.angularVelocity);
+				};
+			}
+
+			function sgn(n) {
+				return n > 0 ? 1 : -1;
+			}
+
+			function PID_Control() {
+				this.K_p = 1;
+				this.K_i = 0;
+				this.K_d = 0;
+				this.cumulative_error = 0;
+				this.last_error = false;
+				this.p_term = 0;
+				this.i_term = 0;
+				this.d_term = 0;
+
+				this.getUpdate = function(error, dx) {
+					if (this.last_error == false) {
+						this.cumulative_error += error * dx;
+						this.last_error = error;
+						return 0;
+					} else {
+						this.cumulative_error += error * dx;
+						this.p_term = this.K_p * error;
+						this.i_term = this.K_i * this.cumulative_error;
+						this.d_term = this.K_d * (error - this.last_error)/(dx);
+						this.last_error = error;
+						console.log(this.p_term, this.i_term, this.d_term)
+						return this.p_term + this.i_term + this.d_term;
+					}
+				};
+			}
+
+			document.addEventListener('keydown', function (e) {
+				keys[e.keyCode] = true;
+			})
+
+			document.addEventListener('keyup', function (e) {
+				keys[e.keyCode] = false;
+			})
 		</script>
 	</body>
 </html>
