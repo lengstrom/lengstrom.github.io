@@ -1,65 +1,89 @@
 var showCase = [
 	{
-		"title": "Hextris",
-		"date": "July 28, 2014",
-		"src": "/img/hextris.png",
-		"url": "/projects/hextris",
-		"target": "projects"
+		"title":"<b>Hextris</b>: A critically acclaimed, fast paced puzzle game",
+		"date":"July 28, 2014",
+		"src":"/img/hextris.png",
+		"url":"/projects/hextris",
+		"target":"projects"
 	},
 	{
-		"title": "Problematic Particles",
-		"date": "April 26, 2014",
-		"src": "/img/pp.png",
-		"url": "/projects/problematicparticles",
-		"target": "projects"
+		"title":"<b>Problematic Particles</b>: An iOS puzzle game",
+		"date":"April 26, 2014",
+		"src":"/img/pp.png",
+		"url":"/projects/problematicparticles",
+		"target":"projects"
 	},
 	{
-		"title": "iPass",
-		"date": "March 14, 2013",
-		"src": "/img/ipass.png",
-		"url": "/projects/ipass.png",
-		"target": "projects"
+		"title":"<b>iPass Mobile</b>: A mobile version of Lincoln-Sudbury High School's scheduling system",
+		"date":"March 14, 2013",
+		"src":"/img/ipass.png",
+		"url":"/projects/ipass.png",
+		"target":"projects"
 	},
 	{
-		"title": "Dangerous Chef Pioneer",
-		"date": "December 20, 2013",
-		"src": "/img/dcp.png",
-		"url": "/projects/dcp",
-		"target": "projects"
+		"title":"<b>Dangerous Chef Pioneer</b>: GitHub Game Off 2013 entry",
+		"date":"December 20, 2013",
+		"src":"/img/dcp.png",
+		"url":"/projects/dcp",
+		"target":"projects"
 	},
 	{
-		"title": "Pyramid Simulator",
-		"date": "November 21, 2013",
-		"src": "/img/pyramid.png",
-		"url": "http://github.com/meadowstream/pyramidsimulator",
-		"target": "projects"
+		"title":"<b>Pyramid Simulator</b>: A history project",
+		"date":"November 21, 2013",
+		"src":"/img/pyramid.png",
+		"url":"http://github.com/meadowstream/pyramidsimulator",
+		"target":"projects"
 	},
 	{
-		"title": "Derp Space 9",
-		"date": "September 13, 2013",
-		"src": "/img/ds9.png",
-		"url": "http://js13kgames.com/entries/derpspacenine",
-		"target": "projects"
+		"title":"<b>Derp Space 9</b>: JS13k 2013 entry",
+		"date":"September 13, 2013",
+		"src":"/img/ds9.png",
+		"url":"http://js13kgames.com/entries/derpspacenine",
+		"target":"projects"
 	},
 	{
-		"title": "Math Evaluator (Sublime Text plugin)",
-		"date": "January 13, 2014",
-		"src": "/img/math_evaluator.gif",
-		"url": "https://sublime.wbond.net/packages/Selection%20Evaluator",
-		"target": "projects"
+		"title":"<b>Math Evaluator</b>: A Sublime Text plugin",
+		"date":"January 13, 2014",
+		"src":"/img/math_evaluator.gif",
+		"url":"https://sublime.wbond.net/packages/Selection%20Evaluator",
+		"target":"projects"
 	},{
-		"title": "Flare: Top 10 @ <a href='2014f.pennapps.com'>PennApps</a> & \"Best iOS App\" (First place) @ PennApps!",
-		"date": "September 15, 2014",
-		"src": "/img/flare.png",
-		"url": "http://challengepost.com/software/flare-tm5n9",
-		"target": "projects"
+		"title":"<b>Flare</b>: Top 10 & \"Best iOS App\" @ <a href='http://2014f.pennapps.com'>PennApps</a>",
+		"date":"September 15, 2014",
+		"src":"/img/flare.png",
+		"url":"http://challengepost.com/software/flare-tm5n9",
+		"target":"projects"
 	},{
-		"title": "Radial",
-		"date": "September 13, 2014",
-		"src": "/img/radial.png",
-		"url": "https://github.com/meadowstream/Radial",
-		"target": "projects"
-	},
+		"title":"<b>Radial</b>: 7th place @ <a href='http://js13kgames.com'>JS13k 2014</a>",
+		"date":"September 13, 2014",
+		"src":"/img/radial.png",
+		"url":"https://github.com/meadowstream/Radial",
+		"target":"projects"
+	},{
+		"title":"<b>CodeZoo</b>: An online IDE for beginner programmers",
+		"date":"August 20, 2014",
+		"src":"/img/codezoo.png",
+		"url":"https://github.com/meadowstream/codezoo",
+		"target":["projects"]
+	},{
+		"title":"<b>CodeZoo</b>: An online IDE for beginner programmers",
+		"date":"August 20, 2014",
+		"src":"/img/codezoo.png",
+		"url":"https://github.com/meadowstream/codezoo",
+		"target":"education"
+	},{
+		"title":"<b>Trustee</b>: Offline docs management",
+		"date":"April 6, 2014",
+		"src":"/img/trustee.png",
+		"url":"https://github.com/meadowstream/trustee",
+		"target":"projects"
+	},{
+		"title":"LexHack: A hackathon for high schoolers",
+		"date":"September 27, 2014",
+		"src":"/img/lexhack.png",
+		"url":"http://lexhack.org/",
+		"target":"education"
+	}
 ]
 
 showCase = showCase.sort(function(a,b) {
