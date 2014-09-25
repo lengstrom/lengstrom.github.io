@@ -89,6 +89,12 @@ var showCase = [
 		"src":"/img/lexhack.png",
 		"url":"http://lexhack.org/",
 		"target":"education"
+	},{
+		"title":"<b>A Fun Gravity</b>",
+		"date":"April 20, 2014",
+		"src":"/img/grav.png",
+		"url":"http://loganengstrom.herokuapp.com/articles/gravity.html",
+		"target":"articles"
 	}
 ]
 
