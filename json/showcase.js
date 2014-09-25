@@ -1,6 +1,6 @@
 var showCase = [
 	{
-		"title":"<b>Hextris</b>: A critically acclaimed, fast paced puzzle game",
+		"title":"<b>Hextris</b>: A critically acclaimed puzzle game played over 800,000 times",
 		"date":"July 28, 2014",
 		"src":"/img/hextris.png",
 		"url":"/projects/hextris",
@@ -14,7 +14,7 @@ var showCase = [
 		"target":"projects"
 	},
 	{
-		"title":"<b>iPass Mobile</b>: A mobile version of Lincoln-Sudbury High School's scheduling system",
+		"title":"<b>iPass Mobile</b>: A mobile version of my high school's scheduling system",
 		"date":"March 14, 2013",
 		"src":"/img/ipass.png",
 		"url":"/projects/ipass.png",
@@ -72,7 +72,7 @@ var showCase = [
 		"url":"https://github.com/meadowstream/codezoo",
 		"target":"education"
 	},{
-		"title":"Gifford Lab research - coming soon!",
+		"title":"<b>Gifford Lab research</b>: coming soon!",
 		"date":"2014",
 		"src":"/img/csail.png",
 		"url":"http://www.psrg.csail.mit.edu/",
@@ -84,7 +84,7 @@ var showCase = [
 		"url":"https://github.com/meadowstream/trustee",
 		"target":"projects"
 	},{
-		"title":"LexHack: A hackathon for high schoolers",
+		"title":"<b>LexHack</b>: A hackathon for high schoolers",
 		"date":"September 27, 2014",
 		"src":"/img/lexhack.png",
 		"url":"http://lexhack.org/",
