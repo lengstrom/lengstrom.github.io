@@ -72,8 +72,8 @@ var showCase = [
 		"url":"https://github.com/meadowstream/codezoo",
 		"target":"education"
 	},{
-		"title":"<b>Gifford Lab research</b>: coming soon!",
-		"date":"2014",
+		"title":"<b>Computational Genomics Research</b>: Coming soon!",
+		"date":"2014 - 2015",
 		"src":"/img/csail.png",
 		"url":"http://www.psrg.csail.mit.edu/",
 		"target":"research"
