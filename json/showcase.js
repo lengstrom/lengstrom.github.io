@@ -3,28 +3,28 @@ var showCase = [
 		"title":"<b>Hextris</b>: A critically acclaimed puzzle game played over 800,000 times",
 		"date":"July 28, 2014",
 		"src":"/img/hextris.png",
-		"url":"/projects/hextris",
+		"url":"http://hextris.github.io/",
 		"target":"projects"
 	},
 	{
 		"title":"<b>Problematic Particles</b>: An iOS puzzle game",
 		"date":"April 26, 2014",
 		"src":"/img/pp.png",
-		"url":"/projects/problematicparticles",
+		"url":"https://itunes.apple.com/us/app/problematic-particles/id866941631?mt=8",
 		"target":"projects"
 	},
 	{
 		"title":"<b>iPass Mobile</b>: A mobile version of my high school's scheduling system",
 		"date":"March 14, 2013",
 		"src":"/img/ipass.png",
-		"url":"/projects/ipass.png",
+		"url":"/projects/ipass",
 		"target":"projects"
 	},
 	{
 		"title":"<b>Dangerous Chef Pioneer</b>: GitHub Game Off 2013 entry",
 		"date":"December 20, 2013",
 		"src":"/img/dcp.png",
-		"url":"/projects/dcp",
+		"url":"https://github.com/meadowstream/Dangerous-Chef-Pioneer",
 		"target":"projects"
 	},
 	{
