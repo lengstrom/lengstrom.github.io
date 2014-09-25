@@ -72,6 +72,12 @@ var showCase = [
 		"url":"https://github.com/meadowstream/codezoo",
 		"target":"education"
 	},{
+		"title":"Gifford Lab research - coming soon!",
+		"date":"2014",
+		"src":"/img/csail.png",
+		"url":"http://www.psrg.csail.mit.edu/",
+		"target":"research"
+	},{
 		"title":"<b>Trustee</b>: Offline docs management",
 		"date":"April 6, 2014",
 		"src":"/img/trustee.png",
