@@ -17,7 +17,7 @@ var showCase = [
 		"title":"<b>iPass Mobile</b>: A mobile version of my high school's scheduling system",
 		"date":"March 14, 2013",
 		"src":"/img/ipass.png",
-		"url":"/projects/ipass",
+		"url":"https://itunes.apple.com/us/app/lsrhs-schedule/id926159436?mt=8",
 		"target":"projects"
 	},
 	{
