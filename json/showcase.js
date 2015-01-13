@@ -1,6 +1,6 @@
 var showCase = [
 	{
-		"title":"<b>Hextris</b>: A critically acclaimed puzzle game (now played by over 800,000 people!)",
+		"title":"<b>Hextris</b>: A critically acclaimed puzzle game played by millions!",
 		"date":"July 28, 2014",
 		"src":"/img/hextris.png",
 		"url":"http://hextris.github.io/",
