@@ -107,7 +107,7 @@ var showCase = [
 		"src":"/img/ftcml.png",
 		"url":"/articles/ftcml.html",
 		"target":"articles"
-	}
+	},
 ];
 
 showCase = showCase.sort(function(a,b) {
