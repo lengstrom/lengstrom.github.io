@@ -27,7 +27,14 @@
 				<b>Education</b>
 			</div>
 		</div>
-	
+
+		<div class = 'case' id = 'articles' name = 'articles'>
+			<div class = 'title subHeader'>
+				<a href = '#articles'>#</a>
+				<b>Articles</b>
+			</div>
+		</div>
+
 		<script type="text/javascript" src = '/vendor/jquery.js'></script>
 		<script type="text/javascript" src = '/json/showcase.js'></script>
 		<script type='text/javascript'>
@@ -36,7 +43,6 @@
 			});
 
 			function make_img_cont(title, date, src, url, target) {
-                if (target == 'articles') return;
 				var img_cont = document.createElement('div');
 				var img_date = document.createElement('span');
 				var img_title = document.createElement('span');
