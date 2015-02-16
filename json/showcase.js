@@ -97,13 +97,13 @@ var showCase = [
 		"target":"articles"
 	},{
 		"title":"<b>PID Control Basics</b>",
-		"date":"Feb 27, 2014",
+		"date":"Jul 27, 2014",
 		"src":"/img/pidbasics.png",
 		"url":"/articles/basicpid.html",
 		"target":"articles"
 	},{
 		"title":"<b>Machine Learning in FTC Robotics</b>",
-		"date":"Jan 15, 2014",
+		"date":"Jun 15, 2014",
 		"src":"/img/ftcml.png",
 		"url":"/articles/ftcml.html",
 		"target":"articles"
