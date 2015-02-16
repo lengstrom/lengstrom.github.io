@@ -90,12 +90,6 @@ var showCase = [
 		"url":"http://lexhack.org/",
 		"target":"education"
 	},{
-		"title":"<b>A Fun Gravity</b>",
-		"date":"April 20, 2014",
-		"src":"/img/grav.png",
-		"url":"http://loganengstrom.herokuapp.com/articles/gravity.html",
-		"target":"articles"
-	},{
 		"title":"<b>PID Control Basics</b>",
 		"date":"Jul 27, 2014",
 		"src":"/img/pidbasics.png",
@@ -107,7 +101,13 @@ var showCase = [
 		"src":"/img/ftcml.png",
 		"url":"/articles/ftcml.html",
 		"target":"articles"
-	},
+	},{
+		"title":"<b>A Fun Gravity</b>",
+		"date":"April 20, 2014",
+		"src":"/img/grav.png",
+		"url":"http://loganengstrom.herokuapp.com/articles/gravity.html",
+		"target":"articles"
+	}
 ];
 
 showCase = showCase.sort(function(a,b) {
