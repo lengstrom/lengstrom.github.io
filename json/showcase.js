@@ -108,7 +108,7 @@ var showCase = [
 		"url":"/articles/ftcml.html",
 		"target":"articles"
 	}
-]
+];
 
 showCase = showCase.sort(function(a,b) {
 	return new Date(b.date) - new Date(a.date);
