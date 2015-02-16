@@ -95,6 +95,12 @@ var showCase = [
 		"src":"/img/grav.png",
 		"url":"http://loganengstrom.herokuapp.com/articles/gravity.html",
 		"target":"articles"
+	},{
+		"title":"<b>Machine Learning in FTC Robotics</b>",
+		"date":"Jan 15, 2014",
+		"src":"/img/ftcml.png",
+		"url":"/articles/ftcml.html",
+		"target":"articles"
 	}
 ]
 
