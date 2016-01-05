@@ -60,18 +60,6 @@ var showCase = [
 		"url":"https://github.com/meadowstream/Radial",
 		"target":"projects"
 	},{
-		"title":"<b>CodeZoo</b>: An online IDE for beginner programmers",
-		"date":"August 20, 2014",
-		"src":"/img/codezoo.png",
-		"url":"https://github.com/meadowstream/codezoo",
-		"target":["projects"]
-	},{
-		"title":"<b>CodeZoo</b>: An online IDE for beginner programmers",
-		"date":"August 20, 2014",
-		"src":"/img/codezoo.png",
-		"url":"https://github.com/meadowstream/codezoo",
-		"target":"education"
-	},{
 		"title":"<b>Computational Genomics Research</b>: Coming soon!",
 		"date":"2014 - 2015",
 		"src":"/img/csail.png",
