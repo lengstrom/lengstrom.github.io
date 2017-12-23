@@ -1,29 +1,40 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <style>
       img {
-        width: 250px;
-        max-width: 100%;
-        height: auto;
-        margin-right:18px;
+        max-width: 98%;
+        padding-right: 2%;
+        vertical-align: middle;
+      }
+      table { table-layout: fixed; }
+      td {
+        width: 50%;
       }
 
       body {
         max-width: 600px;
-        padding-left: 8px;
-        padding-top: 8px;
+        padding: 10px;
+        padding-top: 25px;
         padding-bottom: 40px;
         margin: 0 auto;
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
         background-color: #fdfdfd;
+        line-height: 1.35;
+      }
+
+      h1 {
+        margin-top: 0;
+        line-height: 1;
       }
 
       h3 {
         margin-bottom: -1px;
       }
 
-      li{
+      li {
         margin: 7px 0;
       }
 
@@ -32,108 +43,105 @@
         background-color:#2200CC;
         color:white;
       }
-  </style>
+    </style>
   </head>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-51272720-4', 'auto');
-    ga('send', 'pageview');
-  </script>
   <body>
     <table>
       <tr>
         <td>
           <img src='imgs/logan_2.jpg'>
         </td>
-        <td>
+        <td style='padding-left:5px;'>
           <h1>Logan Engstrom</h1>
-          Email: <a href='mailto:engstrom@mit.edu'>engstrom@mit.edu</a>
-          <br>
-          GitHub: <a href='https://github.com/lengstrom/'>https://github.com/lengstrom/</a>
-          <br>
-          Google Scholar: <a href='https://scholar.google.com/citations?user=IWPWNxkAAAAJ'>here</a>
-          <br>
+          Email: <a href='mailto:engstrom@mit.edu'>engstrom@mit.edu</a> <br>
+          GitHub: <a href='https://github.com/lengstrom/'>@lengstrom</a> <br>
+          Google Scholar: <a href='https://scholar.google.com/citations?user=IWPWNxkAAAAJ'>here</a> <br>
           CV/Resume: <a href='raw/LoganEngstromResume.pdf'>here</a>
         </td>
       </tr>
     </table>
-    
+
     <h3>About</h3>
     <p>
-      I'm a third year undergraduate at <a href='https://www.mit.edu'>MIT</a> studying Computer Science. I'm most interested in machine learning and security. I currently work in the <a href='http://cgs.csail.mit.edu/'>Gifford Lab</a> and the <a href='http://people.csail.mit.edu/madry/lab/'>Mądry Lab</a> in <a href='https://www.csail.mit.edu/'>CSAIL</a>. I previously interned at <a href='https://research.google.com/teams/brain/'>Google Brain</a> (2017) and <a href='https://apple.com'>Apple</a> (2016) over the past two summers. I am currently searching for a 2018 summer internship.
+    I'm a third year undergraduate at <a href='https://www.mit.edu'>MIT</a> studying Computer Science. I'm most interested in machine learning and security. I currently work in the <a href='http://cgs.csail.mit.edu/'>Gifford Lab</a> and the <a href='http://people.csail.mit.edu/madry/lab/'>Mądry Lab</a> in <a href='https://www.csail.mit.edu/'>CSAIL</a>. I previously interned at <a href='https://research.google.com/teams/brain/'>Google Brain</a> (2017) and <a href='https://apple.com'>Apple</a> (2016) over the past two summers. I am currently searching for a 2018 summer internship.
     </p>
     <p>
-      At MIT I play for the Simmons intramural soccer team and the Baker intramural dodgeball team. I used to organize <a href='https://hackmit.org/'>HackMIT</a> and help out in <a href='https://www.eecs.mit.edu/node/6606'>USAGE</a>.
+    At MIT I play for the Simmons intramural soccer team and the Baker intramural dodgeball team. I used to organize <a href='https://hackmit.org/'>HackMIT</a> and help out in <a href='https://www.eecs.mit.edu/node/6606'>USAGE</a>.
     </p>
-  </body>
 
-  <h3>Publications</h3>
-  <!-- <link rel="import" href="bib/publications.html"> -->
-  <p>
+    <h3>Publications</h3>
+    <!-- <link rel="import" href="bib/publications.html"> -->
+    <p>
     <ol>
       <li>
-        <p><a name="sixrotations"></a>
-          
-          <b>Logan Engstrom*</b>, Dimitris Tsipras*, Ludwig Schmidt, and Aleksander Madry.
-          <a href="https://arxiv.org/abs/1712.07113">A Rotation and a Translation Suffice: Fooling CNNs with Simple Transformations</a>.
-          <em>NIPS Machine Learning and Computer Security Workshop</em>, 2017.
+      <p><a name="sixrotations"></a>
 
-        </p>
+      <b>Logan Engstrom*</b>, Dimitris Tsipras*, Ludwig Schmidt, and Aleksander Madry.
+      <a href="https://arxiv.org/abs/1712.07113">A Rotation and a Translation Suffice: Fooling CNNs with Simple Transformations</a>.
+      <em>NIPS Machine Learning and Computer Security Workshop</em>, 2017.
+
+      </p>
 
       </li>
       <li>
-        <p><a name="dnasecapture"></a>
-          Daniel Kang, Richard Sherwood, Amira Barkal, Tatsunori Hashimoto, <b>Logan
-          Engstrom</b>, and David Gifford.
-          Dnase-capture Reveals Differential Transcription Factor Binding
-          modalities.
-          <em>PloS one</em>, 2017.
+      <p><a name="dnasecapture"></a>
+      Daniel Kang, Richard Sherwood, Amira Barkal, Tatsunori Hashimoto, <b>Logan
+        Engstrom</b>, and David Gifford.
+      Dnase-capture Reveals Differential Transcription Factor Binding
+      modalities.
+      <em>PloS one</em>, 2017.
       </li>
     </ol>
     * indicates equal contribution
-  </p>
-</p>
+    </p>
+    </p>
 
-<h3>Preprints</h3>
-<p>
-  <ol>
-    <li>
+    <h3>Preprints</h3>
+    <p>
+    <ol>
+      <li>
       <p><a name="robustadvexs"></a>
 
-        Anish Athalye*, <b>Logan Engstrom*</b>, Andrew Ilyas*, and Kevin Kwok.
-        <a href="https://arxiv.org/abs/1707.07397">Synthesizing Robust Adversarial Examples</a>.
-        <em>Demo at NIPS Machine Learning and Computer Security Workshop, in
-          review at ICLR 2018</em>, 2017.
+      Anish Athalye*, <b>Logan Engstrom*</b>, Andrew Ilyas*, and Kevin Kwok.
+      <a href="https://arxiv.org/abs/1707.07397">Synthesizing Robust Adversarial Examples</a>.
+      <em>Demo at NIPS Machine Learning and Computer Security Workshop, in
+        review at ICLR 2018</em>, 2017.
       </p>
-    </li>
-  </ol>
-  * indicates equal contribution
-</p>
+      </li>
+    </ol>
+    * indicates equal contribution
+    </p>
 
-<h3>Projects</h3>
-<ul>
-  <li>
-    <a href="https://github.com/lengstrom/fast-style-transfer">
-      Fast Style Transfer</a>: TensorFlow CNN for fast style transfer
-  </li>
-  <li>
-    <a href="https://github.com/Hextris/hextris">
-      Hextris</a>: Fast paced HTML5 puzzle game played by millions
-  </li>
-  <li>
-    <a href="https://github.com/lengstrom/falcon">
-      Falcon</a>: Chrome extension for full text history search
-  </li>
-  <li>
-    <a href="https://news.greylock.com/hackfests-arent-about-winning-cd8ee9a2ceac">
-      Sistine</a>: Webcam-based touch screen for any laptop
-  </li>
-  <li>
-    <a href="https://tenso.rs/">
-      TensorFire</a>: neural networks in the browser using WebGL
-  </li>
-</ul>  
+    <h3>Projects</h3>
+    <ul>
+      <li>
+      <a href="https://github.com/lengstrom/fast-style-transfer">
+        Fast Style Transfer</a>: TensorFlow CNN for fast style transfer
+      </li>
+      <li>
+      <a href="https://github.com/Hextris/hextris">
+        Hextris</a>: Fast paced HTML5 puzzle game played by millions
+      </li>
+      <li>
+      <a href="https://github.com/lengstrom/falcon">
+        Falcon</a>: Chrome extension for full text history search
+      </li>
+      <li>
+      <a href="https://news.greylock.com/hackfests-arent-about-winning-cd8ee9a2ceac">
+        Sistine</a>: Webcam-based touch screen for any laptop
+      </li>
+      <li>
+      <a href="https://tenso.rs/">
+        TensorFire</a>: neural networks in the browser using WebGL
+      </li>
+    </ul>  
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-51272720-4', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
 </html>
