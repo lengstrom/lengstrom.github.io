@@ -1,263 +1,184 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta id="viewport" content="width=device-width">
-    <title>Logan Engstrom</title>
-    <style>
-      img {
-        max-width: 98%;
-        padding-right: 2%;
-        vertical-align: middle;
-      }
-      table { table-layout: fixed; }
-      td {
-        width: 50%;
-      }
 
-      body {
-        max-width: 600px;
-        padding: 10px;
-        padding-top: 25px;
-        padding-bottom: 40px;
-        margin: 0 auto;
-        font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
-        background-color: #fdfdfd;
-        line-height: 1.35;
-      }
+<head>
+  <meta charset="utf-8">
+  <meta id="viewport" content="width=device-width">
+  <title>Logan Engstrom</title>
+  <style>
+    img {
+      max-width: 98%;
+      padding-right: 2%;
+      vertical-align: middle;
+    }
 
-      h1 {
-        margin-top: 0;
-        line-height: 1;
-      }
+    table {
+      table-layout: fixed;
+    }
 
-      h3 {
-        margin-bottom: -1px;
-      }
+    td {
+      width: 50%;
+    }
 
-      li {
-        margin: 7px 0;
-      }
+    body {
+      max-width: 600px;
+      padding: 10px;
+      padding-top: 25px;
+      padding-bottom: 40px;
+      margin: 0 auto;
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+      background-color: #fdfdfd;
+      line-height: 1.35;
+    }
 
-      a { color:#2200CC; }
-      a:hover {
-        background-color:#2200CC;
-        color:white;
-      }
-    </style>
-  </head>
+    h1 {
+      margin-top: 0;
+      line-height: 1;
+    }
+
+    h3 {
+      margin-bottom: -1px;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    a {
+      color: #2200CC;
+    }
+
+    a:hover {
+      background-color: #2200CC;
+      color: white;
+    }
+  </style>
+</head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9S7DH1838C"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-9S7DH1838C');
 </script>
-  <body>
-    <table>
-      <tr>
-        <td>
-          <img alt='Photo of Logan Engstrom' width="220px" src='imgs/bigger3.jpeg'>
-        </td>
-        <td style='padding-left:5px;'>
-          <h1>Logan Engstrom</h1>
-          Email: <a href='mailto:engstrom@mit.edu'>engstrom@mit.edu</a> <br>
-          Google Scholar: <a href='https://scholar.google.com/citations?user=IWPWNxkAAAAJ'>here</a> <br>
-          CV/Resume: <a href='raw/LoganEngstromCV.pdf'>here</a> <br>
-          GitHub: <a href='https://github.com/lengstrom/'>@lengstrom</a>
-        </td>
-      </tr>
-    </table>
 
-    <h3>About</h3>
-    <p>
-    I am a PhD student at <a href='https://www.mit.edu'>MIT EECS</a>
+<body>
+  <table>
+    <tr>
+      <td>
+        <img alt='Photo of Logan Engstrom' width="220px" src='imgs/bigger3.jpeg'>
+      </td>
+      <td style='padding-left:5px;'>
+        <h1>Logan Engstrom</h1>
+        Email: <a href='mailto:engstrom@mit.edu'>engstrom@mit.edu</a> <br>
+        Google Scholar: <a href='https://scholar.google.com/citations?user=IWPWNxkAAAAJ'>here</a> <br>
+        CV/Resume: <a href='raw/LoganEngstromCV.pdf'>here</a> <br>
+        GitHub: <a href='https://github.com/lengstrom/'>@lengstrom</a>
+      </td>
+    </tr>
+  </table>
+
+  <h3>About</h3>
+  <p>
+    I am a final year PhD student at <a href='https://www.mit.edu'>MIT EECS</a>
     advised by <a href='https://people.csail.mit.edu/madry/lab/'>Aleksander Mądry</a>
     and funded by a
-     <a href="https://research.google/outreach/phd-fellowship/">Google PhD Fellowship</a>.
+    <a href="https://research.google/outreach/phd-fellowship/">Google PhD Fellowship</a>.
     I am most interested in understanding the role of data in machine learning.
-    </p>
-    <p>
-      I went to MIT for undergrad and grew up in Massachusetts. Outside of research,
-      I contribute to <a href='https://github.com/lengstrom'>open source</a> and play pickup soccer.
-    </p>
+  </p>
+  <p>
+    I went to MIT for undergrad and grew up in Massachusetts. Outside of research,
+    I contribute to <a href='https://github.com/lengstrom'>open source</a> and play pickup soccer.
+  </p>
 
-    <p>
-      <center>
-    [<a href = "#publications">publications</a>] [<a href="#preprints">preprints</a>] [<a href="#opensource">open source</a>]
-      </center>
-    </p>
+  <p>
+    <center>
+      [<a href="#publications">publications</a>] [<a href="#preprints">preprints</a>] [<a href="#opensource">open
+        source</a>]
+    </center>
+  </p>
 
-    <h3 id="publications">Publications</h3>
-    <!-- <link rel="import" href="bib/publications.html"> -->
-    <p>
-    <ol>
-      <li>
-        Guillaume Leclerc, Andrew Ilyas, Logan Engstrom, Sung-min Park,  Hadi Salman, and Aleksander Madry. <a href="http://openaccess.thecvf.com/content/CVPR2023/papers/Leclerc_FFCV_Accelerating_Training_by_Removing_Data_Bottlenecks_CVPR_2023_paper.pdf">FFCV: Accelerating training by removing data bottlenecks</a>. <em>CVPR 2023</em>.
-      </li>
-      <li>
-        Guillaume Leclerc, Hadi Salman, Andrew Ilyas, Sai Vemprala, Logan Engstrom, Vibhav Vineet, Kai Xiao, Pengchuan Zhang, Shibani Santurkar, Greg Yang, Ashish Kapoor, and Aleksander Madry. <a href="https://arxiv.org/abs/2106.03805">3db: A framework for debugging computer vision models</a>. <em>NeurIPS 2022</em>.
-      </li>
-      <li>
-        <p>
-          Andrew Ilyas, Sam Park, Logan Engstrom, Guillaume LeClerc, Aleksander Madry. <a href="https://arxiv.org/abs/2202.00622">Datamodels: Predicting Predictions from Training Data</a>. <em>ICML 2022</em>.
-        </p>
-      </li>
-        <li>
-          <p>
-            Hadi Salman, Andrew Ilyas, Logan Engstrom, Sai Vemprala, Aleksander Madry, Ashish Kapoor. <a href="https://arxiv.org/abs/2012.12235">Unadversarial Examples: Designing Objects for Robust Vision</a>. <em>NeurIPS 2021</em>.
-          </p>
-        </li>
-        <li>
-          <p>
-            Kai Xiao, Logan Engstrom, Andrew Ilyas, and Aleksander Madry. <a href="https://arxiv.org/abs/2006.09994">Noise or signal: The role of image backgrounds in object recognition</a>. <em>ICLR 2021</em>.
-          </p>
-        </li>
-        <li>
-          <p>
-            Hadi Salman, Andrew Ilyas, Logan Engstrom, Ashish Kapoor, Aleksander Madry. <a href="https://arxiv.org/abs/2007.08489">Do Adversarially Robust ImageNet Models Transfer Better?</a>. <em>NeurIPS 2020 <b>Oral Presentation</b></em>.
-          </p>
-        </li>
-        <li>
-          <p>
-              Logan Engstrom, Andrew Ilyas, Shibani Santurkar, Dimitris Tsipras, Jacob Steinhardt, and Aleksander Mądry.
-              <a href="https://arxiv.org/abs/2005.09619">Identifying Statistical Bias in Dataset Replication</a>. <em>ICML 2020</em>.
-          </p>
-        </li>
-        <li>
-          <p>
-            Dimitris Tsipras, Shibani Santurkar, Logan Engstrom, Andrew Ilyas, and Aleksander Madry. <a href="https://arxiv.org/abs/2005.11295">From imagenet to image classification: Contextualizing progress on benchmarks</a>. <em>ICML 2021</em>.
-          </p>
-        </li>
-        <li>
-            <p>
-                Logan Engstrom, Andrew Ilyas, Shibani Santurkar, Dimitris Tsipras, Firdaus Janoos, Larry Rudolph, and Aleksander Mądry.
-                <a href="https://openreview.net/forum?id=r1etN1rtPB">Implementation Matters in Deep RL: A Case Study on PPO and TRPO</a>. <em>ICLR 2020 <b>Oral Presentation</b></em>.
-            </p>
-        </li>
-        <li>
-            <p>
-                Andrew Ilyas, Logan Engstrom, Shibani Santurkar, Dimitris Tsipras, Firdaus Janoos, Larry Rudolph, and Aleksander Mądry.
-                <a href="https://openreview.net/forum?id=ryxdEkHtPS">A Closer Look at Deep Policy Gradients</a>. <em>ICLR 2020 <b>Oral Presentation</b></em>.
-            </p>
-        </li>
-        <li>
-            <p>
-                Andrew Ilyas, Shibani Santurkar, Dimitris Tsipras, Logan
-                Engstrom, Brandon Tran, and Aleksander Madry. <a href="https://arxiv.org/abs/1905.02175">Adversarial examples are not bugs, they are features</a>. <em>NeurIPS 2019 <b>Spotlight Presentation</b></em>.
-            </p>
-        </li>
-        <li>
-            <p>
-                Shibani Santurkar, Dimitris Tsipras, Brandon Tran, Andrew Ilyas, Logan Engstrom, and Aleksander Madry. <a href="http://gradientscience.org/robust-apps.pdf">Computer vision with a single (robust) classifier.</a>. <em>NeurIPS 2019</em>.
-            </p>
-        </li>
-      <li>
-          <p>
-              Dimitris Tsipras, Shibani Santurkar, Logan Engstrom, Alexander Turner, and Aleksander Mądry.
-              <a href="https://arxiv.org/abs/1805.12152">Robustness May Be at Odds with Accuracy</a>. <em>ICLR 2019</em>.
-          </p>
-      </li>
-      <li>
-          <p>
-              Andrew Ilyas, Logan Engstrom, Ludwig Schmidt, and Aleksander Mądry.
-              <a href="https://arxiv.org/abs/1807.07978">Prior Convictions: Black-Box Adversarial Attacks with Bandits and Priors</a>. <em>ICLR 2019</em>.
-          </p>
-      </li>
-      <li>
+  <h3 id="publications">Selected Work</h3>
+  <p>
+  <ol>
+    <li>
+      Logan Engstrom*, Andrew Ilyas*, Benjamin Chen*, Axel Feldmann, William Moses, and
+      Aleksander Mądry. <a href="https://arxiv.org/abs/2503.13751">Optimizing ML Training with Metagradient Descent</a>.
+      <em>2025</em>.
+    </li>
+    <li>
       <p>
-      Logan Engstrom, Brandon Tran, Dimitris Tsipras, Ludwig Schmidt, and Aleksander Mądry.
-      <a href="https://arxiv.org/abs/1712.02779">A Rotation and a Translation Suffice: Fooling CNNs with Simple Transformations</a>.
-    <em>ICML 2019</em>.
+        Andrew Ilyas, Sam Park, Logan Engstrom, Guillaume LeClerc, Aleksander Madry. <a
+          href="https://arxiv.org/abs/2202.00622">Datamodels: Predicting Predictions from Training Data</a>. <em>ICML
+          2022</em>.
       </p>
-      </li>
-      <li>
-          <p>
-              Logan Engstrom, Andrew Ilyas, and Anish Athalye.
-              <a href="https://arxiv.org/abs/1807.10272">Evaluating and Understanding the Robustness of Adversarial Logit Pairing</a>. <em>NIPS 2018 Machine Learning and Computer Security Workshop</em>.
-          </p>
-      </li>
-      <li>
-          <p>
-              Andrew Ilyas, Logan Engstrom, Anish Athalye, and Jessy Lin.
-              <a href="https://arxiv.org/abs/1804.08598">Black-box Adversarial Attacks with Limited Queries and Information</a>.
-              <em>ICML 2018</em>.
-          </p>
-      </li>
-      <li>
-          <p>
-              Anish Athalye, Logan Engstrom, Andrew Ilyas, and Kevin Kwok.
-              <a href="https://arxiv.org/abs/1707.07397">Synthesizing Robust Adversarial Examples</a>.
-              <em>ICML 2018, Demo at NeurIPS 2017 Machine Learning and Computer Security Workshop</em>.
-          </p>
-      </li>
-
-      <li>
+    </li>
+    <li>
       <p>
-      Daniel Kang, Richard Sherwood, Amira Barkal, Tatsunori Hashimoto, Logan
-        Engstrom, and David Gifford.
-      <a href = 'http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0187046'>DNase-capture Reveals Differential Transcription Factor Binding
-      modalities</a>.
-      <em>PloS one</em>, 2017.
+        Logan Engstrom, Andrew Ilyas, Shibani Santurkar, Dimitris Tsipras, Firdaus Janoos, Larry Rudolph, and Aleksander
+        Mądry.
+        <a href="https://openreview.net/forum?id=r1etN1rtPB">Implementation Matters in Deep RL: A Case Study on PPO and
+          TRPO</a>. <em>ICLR 2020 <b>Oral Presentation</b></em>.
       </p>
-      </li>
-    </ol>
+    </li>
+    <li>
+      <p>
+        Andrew Ilyas, Shibani Santurkar, Dimitris Tsipras, Logan
+        Engstrom, Brandon Tran, and Aleksander Madry. <a href="https://arxiv.org/abs/1905.02175">Adversarial examples
+          are not bugs, they are features</a>. <em>NeurIPS 2019 <b>Spotlight Presentation</b></em>.
+      </p>
+    </li>
+    <li>
+      <p>
+        Dimitris Tsipras, Shibani Santurkar, Logan Engstrom, Alexander Turner, and Aleksander Mądry.
+        <a href="https://arxiv.org/abs/1805.12152">Robustness May Be at Odds with Accuracy</a>. <em>ICLR 2019</em>.
+      </p>
+    </li>
+    <li>
+      <p>
+        Anish Athalye, Logan Engstrom, Andrew Ilyas, and Kevin Kwok.
+        <a href="https://arxiv.org/abs/1707.07397">Synthesizing Robust Adversarial Examples</a>.
+        <em>ICML 2018, Demo at NeurIPS 2017 Machine Learning and Computer Security Workshop</em>.
+      </p>
+    </li>
+  </ol>
 
-    <h3 id="preprints">Preprints</h3>
-    <ol>
-      <li>
-        <p>
-            Logan Engstrom, Axel Feldmann, and Aleksander Madry. <a href="https://arxiv.org/abs/2401.12926">DsDm: Dataset Selection with Datamodels</a>. 2024.
-        </p>
-      </li>
-      <li>
-        <p>
-            Josh Vendrow, Saachi Jain, Logan Engstrom, and Aleksander Madry. <a href="https://arxiv.org/abs/2302.07865">Dataset interfaces: Diagnosing model failures using controllable counterfactual generation</a>. 2023.
-        </p>
-      </li>
-      <li>
-        <p>
-            Hadi Salman, Saachi Jain, Andrew Ilyas, Logan Engstrom, Eric Wong, and Aleksander Madry. <a href="https://arxiv.org/abs/2207.02842">When does Bias Transfer in Transfer Learning?</a>. 2022.
-        </p>
-      </li>
-      <li>
-          <p>
-              Logan Engstrom, Andrew Ilyas, Shibani Santurkar, Dimitris Tsipras, Brandon Tran, and Aleksander Madry. <a href="https://arxiv.org/abs/1906.00945">Learning perceptually-aligned representations via adversarial robustness</a>. 2019.
-          </p>
-      </li>
-   </ol>
-
-    <h3 id="opensource">Open Source</h3>
-    <ul>
-      <li>
+  <h3 id="opensource">Open Source</h3>
+  <ul>
+    <li>
+      <a href="https://github.com/libffcv/ffcv">
+        Fast Style Transfer</a>: TensorFlow CNN for fast style transfer
+    </li>
+    <li>
       <a href="https://github.com/lengstrom/fast-style-transfer">
         Fast Style Transfer</a>: TensorFlow CNN for fast style transfer
-      </li>
-      <li>
+    </li>
+    <li>
       <a href="https://github.com/bijection/sistine">
         Sistine</a>: Webcam-based touch screen for any laptop
-      </li>
-      <li>
+    </li>
+    <li>
       <a href="https://tenso.rs/">
         TensorFire</a>: accelerated neural networks in the browser using WebGL
-      </li>
-      <li>
-        <a href="https://github.com/lengstrom/tensorguard">
-          Tensorguard</a>: Runtime typechecking for machine learning
-        </li>
-      <li>
-        <a href="https://github.com/lengstrom/gitlinks">
-          gitlinks</a>: Go-links for GitHub pages
-        </li>
-      <li>
+    </li>
+    <li>
+      <a href="https://github.com/lengstrom/tensorguard">
+        Tensorguard</a>: Runtime typechecking for machine learning
+    </li>
+    <li>
+      <a href="https://github.com/lengstrom/gitlinks">
+        gitlinks</a>: Go-links for GitHub pages
+    </li>
+    <li>
       <a href="https://github.com/Hextris/hextris">
         Hextris</a>: Fast paced HTML5 puzzle game played more than 15 million times
-      </li>
-      <li>
+    </li>
+    <li>
       <a href="https://github.com/lengstrom/falcon">
         Falcon</a>: Chrome extension for full text history search
-      </li>
-    </ul>
-  </body>
+    </li>
+  </ul>
+</body>
+
 </html>
